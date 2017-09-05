@@ -1,0 +1,14 @@
+<h1>Welcome to your Task Manager</h1>
+<p>Here are all your tasks:</p>
+
+<% @task.each do |task| %>
+  <ol>
+    <li>
+      <%= task.name %>
+      <%= link_to 'Details', task_path(task) %>
+      <%= link_to 'Edit the task', edit_task_path(task) %>
+      <%= link_to 'Delete!', task_path(task), method: :delete %>
+    </li>
+  </ol>
+<% end %>
+<%= link_to 'Create a new task', new_task_path %>

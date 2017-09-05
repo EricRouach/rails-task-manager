@@ -1,0 +1,5 @@
+<h1> <%= @task.name %></h1>
+  <ul>
+    <li><%= @task.details %> - <%= @task.created_at %></li>
+  </ul>
+<%= link_to 'Back to the index page', tasks_path %>
